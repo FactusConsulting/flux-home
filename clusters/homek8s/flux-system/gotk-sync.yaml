@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: develop
   secretRef:
     name: flux-system
   url: ssh://git@github.com/Larswa/flux
@@ -19,7 +19,7 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 5m0s
   path: ./clusters/homek8s
   prune: true
   sourceRef:
