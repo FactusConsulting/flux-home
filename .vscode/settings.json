@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/kustomization.json": "file:///d%3A/source/flux-home/infrastructure/nginx/kustomization.yaml",
+        "kubernetes://schema/helm.toolkit.fluxcd.io/v2beta1@helmrelease": "file:///d%3A/source/flux-home/infrastructure/nginx/release.yaml"
+    }
+}
