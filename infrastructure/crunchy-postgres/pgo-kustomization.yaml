@@ -12,6 +12,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: pgo
+    namespace: postgres
   targetNamespace: postgres
   # patchesStrategicMerge:
   #   - |-
