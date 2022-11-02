@@ -18,4 +18,4 @@ spec:
       retries: 3
   values:
     installCRDs: true
-    replicaCount: 2
+    replicaCount: 1
