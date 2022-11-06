@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: flux-system
+        namespace: infrastructure
       version: "9.x"
   interval: 1h0m0s
   install:
