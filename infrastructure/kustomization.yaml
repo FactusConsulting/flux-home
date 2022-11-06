@@ -4,6 +4,6 @@ resources:
   - namespace.yaml
   - sources
   - nginx2
-  - cert-manager
+  # - cert-manager
   - crunchy-postgres
   # - cluster-secret
