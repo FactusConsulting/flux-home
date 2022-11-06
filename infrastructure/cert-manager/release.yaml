@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: jetstack
-        namespace: flux-system
+        namespace: infrastructure
       version: "1.x"
   interval: 1h0m0s
   install:
