@@ -5,4 +5,4 @@ resources:
   - sources
   - nginx
   - cert-manager
-  # - crunchy-postgres
+  - crunchy-postgres
