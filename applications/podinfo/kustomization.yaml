@@ -4,3 +4,4 @@ namespace: AppDeployTest
 resources:
   - podinfo-kustomization.yaml
   - podinfo-source.yaml
+  - namespace.yaml
