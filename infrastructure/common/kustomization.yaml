@@ -5,3 +5,4 @@ resources:
   - cert-manager
   - crunchy-postgres
   - clustersecret
+  - namespace.yaml
