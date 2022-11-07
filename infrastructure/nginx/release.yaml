@@ -11,8 +11,9 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: infrastructure-nginx
+        namespace: infrastructure
       version: "9.x"
+  targetNamespace: infrastructure-nginx
   interval: 1h0m0s
   install:
     remediation:
