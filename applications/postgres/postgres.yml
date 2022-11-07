@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: postgres
+
+---
+
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PostgresCluster
+metadata:
+    name: common
+    namespace: postgres
+spec:
+  service:
+    metadata:
+      annotations:
+        metallb.universe.tf/loadBalancerIPs: 192.168.1.41   # Metallb replacing loadbalancerip
+    type: LoadBalancer
+  # monitoring:
+  #   pgmonitor:
+  #     exporter:
+  #       image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres-exporter:ubi8-5.0.4-0
+  users:
+    - name: hotlaps
+      databases:
+        - hotlaps-dev
+        - hotlaps-test
+        - hotlaps-prod
+      options: "SUPERUSER"
+  image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-14.5-1
+  postgresVersion: 14
+  instances:
+    - name: common
+      replicas: 2
+      #resources:
+      #  limits:
+      #    cpu: 4.0
+      #    memory: 8Gi
+      dataVolumeClaimSpec:
+        accessModes:
+        - "ReadWriteOnce"
+        resources:
+          requests:
+            storage: 10Gi
+        storageClassName: nfs-client
+  backups:
+    pgbackrest:
+      global:
+        repo1-retention-full: "14"
+        repo1-retention-full-type: time
+      image: registry.developers.crunchydata.com/crunchydata/crunchy-pgbackrest:ubi8-2.40-1
+      repos:
+      - name: repo1
+        schedules:
+          full: "0 1 * * *"
+        volume:
+          volumeClaimSpec:
+            accessModes:
+            - "ReadWriteOnce"
+            resources:
+              requests:
+                storage: 20Gi
+            storageClassName: nfs-client
