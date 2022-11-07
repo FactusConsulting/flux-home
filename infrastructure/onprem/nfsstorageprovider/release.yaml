@@ -19,8 +19,6 @@ spec:
     remediation:
       retries: 3
   values:
-    storageClass:
-      defaultClass: true
-    nfs:
-      path: /volume1/kubernetes-dynamic
-      server: 192.168.1.26
+    - storageClass.defaultClass: true
+    - nfs.path: /volume1/kubernetes-dynamic
+    - nfs.server: 192.168.1.26
