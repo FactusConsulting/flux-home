@@ -2,7 +2,7 @@ apiVersion: metallb.io/v1beta1
 kind: AddressPool
 metadata:
   name: addresspool-sample1
-  namespace: infrastructure-metallb
+  namespace: metallb-system
 spec:
   protocol: layer2
   addresses:
