@@ -13,7 +13,7 @@ spec:
         name: metallb-crd
         namespace: infrastructure-onprem
       version: "0.x"
-  targetNamespace: metallb-system
+  targetNamespace: infrastructure-metallb
   interval: 1h0m0s
   install:
     remediation:
