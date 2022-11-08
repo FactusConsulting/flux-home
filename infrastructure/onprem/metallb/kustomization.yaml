@@ -4,4 +4,4 @@ resources:
   - namespace.yaml
   - metallb-chart.yaml
   - release.yaml
-  - MetallbConfigmap.Layer2Operator.yaml
+  #- MetallbConfigmap.Layer2Operator.yaml
