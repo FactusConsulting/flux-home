@@ -3,7 +3,7 @@ apiVersion: clustersecret.io/v1
 kind: ClusterSecret
 metadata:
   name: common-pguser-hotlaps
-  namespace: clustersecret
+  namespace: infrastructure-clustersecret
   labels:
     somelabel: somevalue
   annotations:
