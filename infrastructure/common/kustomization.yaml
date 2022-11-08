@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - namespace.yaml
   #- cert-manager
-  - clustersecret
+  # - clustersecet
   - crunchy-postgres
   - nginx
