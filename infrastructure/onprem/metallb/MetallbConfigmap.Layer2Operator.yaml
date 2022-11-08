@@ -1,7 +1,7 @@
 apiVersion: metallb.io/v1beta1
-kind: AddressPool
+kind: IPAddressPool
 metadata:
-  name: addresspool-sample1
+  name: LocalPool
   namespace: infrastructure-metallb
 spec:
   protocol: layer2
