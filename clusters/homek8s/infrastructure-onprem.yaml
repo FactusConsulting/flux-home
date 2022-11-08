@@ -11,3 +11,5 @@ spec:
     namespace: flux-system
   path: ./infrastructure/onprem
   prune: true
+  dependsOn:
+    - name: infrastructure-common
