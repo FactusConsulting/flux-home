@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: crunchy-postgres-operator
-  namespace: infrastructure
+  namespace: infrastructure-common
 spec:
   interval: 30s
   ref:
