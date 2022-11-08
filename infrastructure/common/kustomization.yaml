@@ -5,4 +5,4 @@ resources:
   #- cert-manager
   #- clustersecret
   #- crunchy-postgres
-  #- nginx
+  - nginx
