@@ -4,6 +4,6 @@ metadata:
   name: LocalPool
   namespace: infrastructure-metallb
 spec:
-  protocol: layer2
+  #  protocol: layer2
   addresses:
     - 192.168.1.41-192.168.1.59
