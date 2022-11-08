@@ -4,5 +4,5 @@ resources:
   - namespace.yaml
   #- cert-manager
   #- clustersecret
-  #- crunchy-postgres
+  - crunchy-postgres
   - nginx
