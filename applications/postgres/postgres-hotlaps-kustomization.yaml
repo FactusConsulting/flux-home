@@ -11,6 +11,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: cluster-secret
+    name: flux-system
     namespace: flux-system
   targetNamespace: postgres
