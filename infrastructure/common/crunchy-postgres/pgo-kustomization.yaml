@@ -12,5 +12,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: crunchy-postgres-operator
-    namespace: infrastructure
+    namespace: infrastructure-common
   targetNamespace: infrastructure-postgres-operator
