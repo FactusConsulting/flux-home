@@ -4,7 +4,7 @@ kind: Kustomization
 
 metadata:
   name: pgo-hotlaps
-  namespace: application
+  namespace: postgres
 spec:
   interval: 5m0s
   path: ./applications/postgres-hotlaps/
