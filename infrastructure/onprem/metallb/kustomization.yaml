@@ -5,3 +5,4 @@ resources:
   - metallb-chart.yaml
   - release.yaml
   - MetallbConfigmap.Layer2Operator.yaml
+  - namespace-metallbsystem.yaml
