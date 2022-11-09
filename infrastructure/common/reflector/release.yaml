@@ -4,7 +4,7 @@ metadata:
   name: reflector
   namespace: infrastructure-common
 spec:
-  releaseName: nginx-ingress-controller
+  releaseName: reflector
   chart:
     spec:
       chart: reflector
