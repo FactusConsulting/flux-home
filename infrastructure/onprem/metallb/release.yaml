@@ -7,7 +7,7 @@ spec:
   releaseName: metallb-crd
   chart:
     spec:
-      chart: metallb
+      chart: metallb-crd
       sourceRef:
         kind: HelmRepository
         name: metallb-crd
