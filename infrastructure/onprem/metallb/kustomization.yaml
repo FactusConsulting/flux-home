@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - metallb-helmrepository.yaml
-  - metallb-helmchart.yaml
+  # - metallb-helmchart.yaml
   - metallb-helmrelease.yaml

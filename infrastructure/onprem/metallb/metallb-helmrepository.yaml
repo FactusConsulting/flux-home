@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: metallb-crd
-  namespace: infrastructure-metallb
+  name: metallb
+  namespace: infrastructure-onprem
 spec:
   interval: 30m
   url: https://metallb.github.io/metallb

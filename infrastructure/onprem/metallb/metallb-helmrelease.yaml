@@ -4,13 +4,13 @@ metadata:
   name: metallb
   namespace: infrastructure-metallb
 spec:
-  releaseName: metallb-crd
+  releaseName: metallb
   chart:
     spec:
-      chart: metallb-crd
+      chart: metallb
       sourceRef:
         kind: HelmRepository
-        name: metallb-crd
+        name: metallb
         namespace: infrastructure-onprem
       version: "0.x"
   targetNamespace: infrastructure-metallb
