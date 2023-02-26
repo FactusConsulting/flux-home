@@ -24,7 +24,7 @@ spec:
   postgresVersion: 14
   instances:
     - name: common
-      replicas: 2
+      replicas: 3
       #resources:
       #  limits:
       #    cpu: 4.0
