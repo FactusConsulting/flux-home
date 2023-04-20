@@ -14,12 +14,18 @@ spec:
   #     exporter:
   #       image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres-exporter:ubi8-5.0.4-0
   users:
-    - name: hotlaps
+    - name: hotlaps-dev
       databases:
         - hotlaps-dev
+      options: "NOSUPERUSER"
+    - name: hotlaps-test
+      databases:
         - hotlaps-test
+      options: "NOSUPERUSER"
+    - name: hotlaps-prod
+      databases:
         - hotlaps-prod
-      options: "SUPERUSER"
+      options: "NOSUPERUSER"
   image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-14.5-1
   postgresVersion: 14
   instances:
