@@ -17,7 +17,7 @@ spec:
     - name: hotlaps-dev
       databases:
         - hotlaps-dev
-      options: "NOSUPERUSER"
+      options: "SUPERUSER"
     - name: hotlaps-test
       databases:
         - hotlaps-test
