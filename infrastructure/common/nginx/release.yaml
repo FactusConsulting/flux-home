@@ -17,7 +17,7 @@ spec:
   interval: 1h0m0s
   install:
     remediation:
-      retries: 3
+      retries: 4
   values:
     tcp:
       5432: "hotlaps-dev/hotlaps-dev-rw:5432"
