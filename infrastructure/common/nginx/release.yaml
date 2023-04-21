@@ -12,14 +12,12 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: infrastructure-common
-      version: "*"
+      version: ">=4.0.0 <5.0.0"
   targetNamespace: ingress-nginx
   interval: 1h0m0s
   install:
     remediation:
       retries: 3
-  # Default values
-  # https://github.com/bitnami/charts/blob/master/bitnami/nginx-ingress-controller/values.yaml
   values:
     service:
       type: NodePort
