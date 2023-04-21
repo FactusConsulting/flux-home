@@ -14,18 +14,18 @@ spec:
   #     exporter:
   #       image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres-exporter:ubi8-5.0.4-0
   users:
-    - name: hotlaps-dev-owner
+    - name: "hotlaps-dev-owner"
       databases:
         - hotlaps-dev
       options: "CREATEDB"
-    - name: hotlaps-dev-writer
+    - name: "hotlaps-dev-writer"
       databases:
         - hotlaps-dev
-    - name: hotlaps-test
+    - name: "hotlaps-test"
       databases:
         - hotlaps-test
       options: "SUPERUSER"
-    - name: hotlaps-prod
+    - name: "hotlaps-prod"
       databases:
         - hotlaps-prod
       options: "SUPERUSER"
