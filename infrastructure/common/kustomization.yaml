@@ -4,5 +4,6 @@ resources:
   - namespace.yaml
   - cert-manager
   - reflector
-  - crunchy-postgres
+  # - crunchy-postgres
+  - cloudnative-pg
   - nginx
