@@ -4,16 +4,16 @@ metadata:
   name: nginx
   namespace: infrastructure-common
 spec:
-  releaseName: nginx-ingress-controller
+  releaseName: ingress-nginx
   chart:
     spec:
-      chart: nginx-ingress-controller
+      chart: ingress-nginx
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: ingress-nginx
         namespace: infrastructure-common
       version: "9.x"
-  targetNamespace: infrastructure-nginx
+  targetNamespace: ingress-nginx
   interval: 1h0m0s
   install:
     remediation:
