@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: infrastructure-common
-      version: "9.x"
+      version: "*"
   targetNamespace: ingress-nginx
   interval: 1h0m0s
   install:
