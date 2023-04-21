@@ -20,7 +20,7 @@ spec:
       retries: 3
   values:
     tcp:
-      5432: "hotlaps-dev/hotlaps-dev-rw:5432"
+      '5432: "hotlaps-dev/hotlaps-dev-rw:5432"'
     #   installCRDs: true
     #   replicaCount: 1
     service:
