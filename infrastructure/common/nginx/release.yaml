@@ -22,4 +22,7 @@ spec:
     installCRDs: true
     replicaCount: 1
     service:
-      type: NodePort
+      type: loadbalancer
+    controller:
+      extraArgs:
+        tcp-services-configmap: "ingress-nginx/tcp-services
