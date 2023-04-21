@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - ingress-nginx.yaml
+  - configmap-tcp-service.yaml
   - release.yaml
