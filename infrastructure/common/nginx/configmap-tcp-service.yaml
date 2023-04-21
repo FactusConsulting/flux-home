@@ -5,4 +5,4 @@ metadata:
   namespace: ingress-nginx
 data:
   5432: "hotlaps-dev/hotlaps-dev-rw:5432"
-  5435: "hotlaps-test/hotlaps-test-rw:5432"
+  # 5435: "hotlaps-test/hotlaps-test-rw:5432"
