@@ -1,16 +1,13 @@
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
-
 metadata:
-  name: pgo-hotlaps
-  namespace: postgres
+  name: development
+  namespace: flux-system
 spec:
-  interval: 5m0s
-  path: ./applications/postgres-hotlaps/
-  prune: true
+  interval: 10m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  targetNamespace: postgres
+  path: ./development
+  prune: true
