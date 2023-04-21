@@ -25,6 +25,6 @@ spec:
     #   replicaCount: 1
     service:
       type: nodeport
-  #   # controller:
-  #   #   extraArgs:
-  #   #     tcp-services-configmap: "ingress-nginx/tcp-services"
+    controller:
+      extraArgs:
+        tcp-services-configmap: "ingress-nginx/tcp-services"
