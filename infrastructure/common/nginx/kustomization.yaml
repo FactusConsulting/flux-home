@@ -5,4 +5,4 @@ resources:
   - ingress-nginx.yaml
   # - configmap-tcp-service.yaml
   - release.yaml
-  - patch-ingress-service.yaml
+  # - patch-ingress-service.yaml
