@@ -5,4 +5,4 @@ resources:
   - cert-manager
   - reflector
   - crunchy-postgres
-  # - nginx
+  - nginx
