@@ -17,7 +17,7 @@ spec:
     - name: hotlaps-dev
       databases:
         - hotlaps-dev
-      options: "SUPERUSER"
+      options: "--createdb"
     - name: hotlaps-test
       databases:
         - hotlaps-test
