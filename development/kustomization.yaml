@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: hotlaps-dev
 resources:
   - namespace.yaml
-  # - postgres.yaml
+  - postgres.yaml
