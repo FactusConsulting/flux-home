@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: traefik
-  namespace: traefik
+  namespace: infrastructure-common
 spec:
   interval: 30m
   url: https://containous.github.io/traefik-helm-chart
