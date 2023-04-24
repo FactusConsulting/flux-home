@@ -13,7 +13,7 @@ spec:
         name: traefik
         namespace: infrastructure-common
       #version: "*"
-  targetNamespace: traefik
+  targetNamespace: infrastructure-common
   interval: 1h0m0s
   install:
     remediation:
