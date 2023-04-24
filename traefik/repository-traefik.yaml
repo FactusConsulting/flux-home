@@ -5,4 +5,4 @@ metadata:
   namespace: infrastructure-common
 spec:
   interval: 30m
-  url: https://containous.github.io/traefik-helm-chart
+  url: https://helm.traefik.io/traefik
