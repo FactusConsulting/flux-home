@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: ingress-nginx
-  namespace: traefik
+  namespace: metallb
 spec:
   interval: 30m
-  url: https://helm.traefik.io/traefik
+  url: https://metallb.github.io/metallb
