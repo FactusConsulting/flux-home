@@ -1,0 +1,27 @@
+# Example of PostgreSQL cluster
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: hotlaps-dev
+  namespace: hotlaps-dev
+spec:
+  # Example of rolling update strategy:
+  # - unsupervised: automated update of the primary once all
+  #                 replicas have been upgraded (default)
+  # - supervised: requires manual supervision to perform
+  #               the switchover of the primary
+  primaryUpdateStrategy: unsupervised
+  bootstrap:
+    initdb:
+      database: hotlaps-dev
+      owner: hotlaps-dev-owner
+  # Require 1Gi of space
+  storage:
+    size: 1Gi
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "1"
+    limits:
+      memory: "512Mi"
+      cpu: "2"
