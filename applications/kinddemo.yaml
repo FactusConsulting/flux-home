@@ -1,0 +1,203 @@
+--- # ---
+
+kind: Pod
+apiVersion: v1
+metadata:
+  name: foo-app
+  labels:
+    app: foo
+spec:
+  containers:
+    - command:
+        - /agnhost
+        - netexec
+        - --http-port
+        - "8080"
+      image: registry.k8s.io/e2e-test-images/agnhost:2.39
+      name: foo-app
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: foo-service
+spec:
+  selector:
+    app: foo
+  ports:
+    # Default port used by the image
+    - port: 8080
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: bar-app
+  labels:
+    app: bar
+spec:
+  containers:
+    - command:
+        - /agnhost
+        - netexec
+        - --http-port
+        - "8080"
+      image: registry.k8s.io/e2e-test-images/agnhost:2.39
+      name: bar-app
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: bar-service
+spec:
+  selector:
+    app: bar
+  ports:
+    # Default port used by the image
+    - port: 8080
+---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: example-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /$2
+# spec:
+#   rules:
+#     - http:
+#         paths:
+#           - pathType: Prefix
+#             path: /foo(/|$)(.*)
+#             backend:
+#               service:
+#                 name: foo-service
+#                 port:
+#                   number: 8080
+#           - pathType: Prefix
+#             path: /bar(/|$)(.*)
+#             backend:
+#               service:
+#                 name: bar-service
+#                 port:
+#                   number: 8080
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-foo-prefix
+spec:
+  stripPrefixRegex:
+    regex:
+      - "^/foo(/|$)(.*)"
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-bar-prefix
+spec:
+  stripPrefixRegex:
+    regex:
+      - "^/bar(/|$)(.*)"
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: foo-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`localhost`) && PathPrefix(`/foo`)
+      kind: Rule
+      middlewares:
+        - name: strip-foo-prefix
+      services:
+        - name: foo-service
+          passHostHeader: true
+          kind: Service
+          port: 8080
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bar-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`localhost`) && PathPrefix(`/bar`)
+      kind: Rule
+      middlewares:
+        - name: strip-bar-prefix
+      services:
+        - name: bar-service
+          passHostHeader: true
+          kind: Service
+          port: 8080
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bar-hostname-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`localhost`) && PathPrefix(`/hostname`)
+      kind: Rule
+      services:
+        - name: bar-service
+          port: 8080
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bar-ip-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`10.96.40.126`) && PathPrefix(`/hostname`)
+      kind: Rule
+      services:
+        - name: bar-service
+          port: 8080
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bar-ip127-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`127.0.0.1`) && PathPrefix(`/hostname`)
+      kind: Rule
+      services:
+        - name: bar-service
+          port: 8080
+#Classic ingress
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: traefik-ingress
+#   namespace: default
+#   annotations:
+#     # traefik.ingress.kubernetes.io/router.entrypoints: web
+#     kubernetes.io/ingress.class: traefik
+# spec:
+#   rules:
+#     - host: localhost
+#       http:
+#         paths:
+#           - pathType: Exact
+#             path: "/hostname"
+#             backend:
+#               service:
+#                 name: bar-service
+#                 port:
+#                   number: 8080
