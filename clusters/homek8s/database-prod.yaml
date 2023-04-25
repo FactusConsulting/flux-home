@@ -1,13 +1,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: prod
-  namespace: flux-system
+  name: database-prod
+  namespace: database
 spec:
   interval: 10m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./prod
+  path: ./database/prod
   prune: true
