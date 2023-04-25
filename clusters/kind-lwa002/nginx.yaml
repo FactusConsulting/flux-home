@@ -9,7 +9,7 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./infrastructure/common/nginx
+  path: ./infrastructure/nginx
   prune: true
   dependsOn:
     - name: namespaces
