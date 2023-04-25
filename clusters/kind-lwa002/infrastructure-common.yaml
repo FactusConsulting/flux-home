@@ -13,3 +13,5 @@ spec:
   prune: true
   dependsOn:
     - name: namespaces
+      namespace: flux-system
+      
