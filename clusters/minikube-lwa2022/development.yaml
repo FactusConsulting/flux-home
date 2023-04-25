@@ -11,3 +11,5 @@ spec:
     namespace: flux-system
   path: ./development
   prune: true
+  dependsOn:
+    - name: namespaces
