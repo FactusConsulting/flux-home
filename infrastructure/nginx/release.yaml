@@ -23,6 +23,6 @@ spec:
       service:
         type: NodePort
         extraArgs:
+          publish-status-address: "localhost"
           #   tcp-services-configmap: "ingress-nginx/tcp-services"
           # watch-ingress-without-class: true
-          publish-status-address: "localhost"
