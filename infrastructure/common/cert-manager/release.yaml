@@ -10,10 +10,10 @@ spec:
       chart: cert-manager
       sourceRef:
         kind: HelmRepository
-        name: jetstack
+        name: helmrepository-jetstack
         namespace: infrastructure-common
       version: "1.x"
-  targetNamespace: infrastructure-certman
+  targetNamespace: certman
   interval: 1h0m0s
   install:
     remediation:
