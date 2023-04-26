@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: nginx-kind
+  name: nginx-ingress-kind
   namespace: flux-system
 spec:
   interval: 10m0s
@@ -9,7 +9,7 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./infrastructure/nginx-kind
+  path: ./infrastructure/nginx-ingress-kind
   prune: true
   dependsOn:
     - name: namespaces

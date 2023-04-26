@@ -12,5 +12,5 @@ spec:
   path: ./applications/ingress-test
   prune: true
   dependsOn:
-    - name: nginx
+    - name: nginx-ingress-kind
       namespace: flux-system
