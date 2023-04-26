@@ -10,7 +10,7 @@ spec:
       chart: reflector
       sourceRef:
         kind: HelmRepository
-        name: helmrepository-emberstack
+        name: emberstack
         namespace: infrastructure-common
   targetNamespace: reflector
   interval: 1h0m0s

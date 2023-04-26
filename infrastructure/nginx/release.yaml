@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nginx
-  namespace: infrastructure-common
+  namespace: infrastructure
 spec:
   releaseName: ingress-nginx
   chart:
