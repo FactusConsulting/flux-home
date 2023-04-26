@@ -68,7 +68,7 @@ spec:
   tls:
     - hosts:
         - localhost
-      secretName: localhost-tls-secret
+      secretName: localk8sdev-tls
   rules:
     - http:
         paths:
