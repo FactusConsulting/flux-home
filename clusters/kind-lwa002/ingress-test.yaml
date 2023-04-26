@@ -13,4 +13,4 @@ spec:
   prune: true
   dependsOn:
     - name: nginx-ingress-kind
-      namespace: infrastructure
+      namespace: flux-system
