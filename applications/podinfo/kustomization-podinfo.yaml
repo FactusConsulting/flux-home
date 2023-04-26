@@ -12,6 +12,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: podinfo
+    namespace: applications
   targetNamespace: default
   patches:
     - patch: |-
