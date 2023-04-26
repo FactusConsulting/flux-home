@@ -68,7 +68,8 @@ spec:
   tls:
     - hosts:
         - localhost
-      secretName: localk8sdev-tls
+        - rd.local
+      secretName: localk8sdev-tls-ingress-test
   rules:
     - http:
         paths:
