@@ -9,7 +9,7 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./infrastructure/common/localhost-certificate
+  path: ./infrastructure/localhost-certificate
   prune: true
   dependsOn:
     - name: infrastructure-common
