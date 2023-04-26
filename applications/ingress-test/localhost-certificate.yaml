@@ -5,6 +5,7 @@ metadata:
   namespace: ingress-test
 spec:
   secretName: ingress-test-tls
+
   duration: 25000h # 3y
   renewBefore: 360h # 15d
   issuerRef:
@@ -16,3 +17,6 @@ spec:
     - localhost.local
     - rd.local
     - rdapi.local
+  subject:
+    organizations:
+      - factus
