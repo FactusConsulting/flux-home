@@ -19,10 +19,8 @@ spec:
     remediation:
       retries: 3
   values:
-    #   installCRDs: true
-    #   replicaCount: 1
-    service:
-      type: nodeport
     controller:
+      service:
+        type: nodeport
       extraArgs:
         tcp-services-configmap: "ingress-nginx/tcp-services"
