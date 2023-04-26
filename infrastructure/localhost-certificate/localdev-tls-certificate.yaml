@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: localk8sdev-tls
+  name: test-tls
   namespace: default
 spec:
-  secretName: localk8sdev-tls
+  secretName: test-tls
   duration: 25000h # 3y
   renewBefore: 360h # 15d
   issuerRef:

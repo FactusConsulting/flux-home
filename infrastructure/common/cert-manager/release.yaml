@@ -13,7 +13,7 @@ spec:
         name: jetstack
         namespace: infrastructure-common
       version: "1.x"
-  targetNamespace: certman
+  targetNamespace: cert-manager
   interval: 1h0m0s
   install:
     remediation:

@@ -69,7 +69,7 @@ spec:
   tls:
     - hosts:
         - localhost
-      secretName: localk8sdev-tls-ingress-test
+      secretName: somesecret
   rules:
     - host: localhost
       http:
