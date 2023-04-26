@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - selfsigned-clusterissuer.yaml
-  - ca-from-selfsignedissuer.yaml
-  - ca-issuer.yaml
-  - localdev-tls-certificate.yaml
+  # - selfsigned-clusterissuer.yaml
+  # - ca-from-selfsignedissuer.yaml
+  # - ca-issuer.yaml
+  - ca-issuer-allinone.yaml
+  # - localdev-tls-certificate.yaml
