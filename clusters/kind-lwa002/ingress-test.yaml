@@ -14,3 +14,5 @@ spec:
   dependsOn:
     - name: nginx-ingress-kind
       namespace: flux-system
+    - name: localhost-certificate
+      namespace: flux-system
