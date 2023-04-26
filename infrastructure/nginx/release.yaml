@@ -20,9 +20,11 @@ spec:
       retries: 3
   values:
     controller:
+      extraArgs:
+      # publish-status-address: "localhost"
+      # watch-ingress-without-class: true
+      # tcp-services-configmap: "ingress-nginx/tcp-services"
+      hostPort:
+        enabled: true
       service:
         type: NodePort
-        extraArgs:
-          publish-status-address: "localhost"
-          #   tcp-services-configmap: "ingress-nginx/tcp-services"
-          # watch-ingress-without-class: true
