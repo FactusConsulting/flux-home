@@ -8,7 +8,7 @@ spec:
   duration: 25000h # 3y
   renewBefore: 360h # 15d
   issuerRef:
-    name: ca-issuer
+    name: k8sdev-ca-issuer
     kind: ClusterIssuer
   commonName: localhost
   dnsNames:

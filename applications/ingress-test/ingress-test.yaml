@@ -64,8 +64,8 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: k8sdev-ca-issuer
-    cert-manager.io/common-name: localhost
+    # cert-manager.io/cluster-issuer: k8sdev-ca-issuer
+    # cert-manager.io/common-name: localhost
 spec:
   tls:
     - hosts:
