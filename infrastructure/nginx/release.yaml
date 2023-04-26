@@ -22,5 +22,7 @@ spec:
     controller:
       service:
         type: NodePort
-      # extraArgs:
-      #   tcp-services-configmap: "ingress-nginx/tcp-services"
+        extraArgs:
+          #   tcp-services-configmap: "ingress-nginx/tcp-services"
+          watch-ingress-without-class: true
+          publish-status-address: localhost
