@@ -14,12 +14,3 @@ spec:
   dependsOn:
     - name: infrastructure-common
       namespace: flux-system
-  # healthChecks:
-  #   - apiVersion: helm.toolkit.fluxcd.io/v2beta1
-  #     kind: HelmRelease
-  #     name: cert-manager
-  #     namespace: infrastructure-common
-  #   - apiVersion: helm.toolkit.fluxcd.io/v2beta1
-  #     kind: HelmRelease
-  #     name: reflector
-  #     namespace: infrastructure-common
