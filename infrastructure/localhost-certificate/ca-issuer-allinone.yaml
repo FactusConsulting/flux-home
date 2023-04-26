@@ -8,12 +8,12 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: my-selfsigned-ca
+  name: selfsigned-ca
   namespace: certman
 spec:
   isCA: true
-  commonName: my-selfsigned-ca
-  secretName: root-secret
+  commonName: selfsigned-ca
+  secretName: ca-root-secret
   privateKey:
     algorithm: ECDSA
     size: 256
@@ -29,4 +29,4 @@ metadata:
   namespace: certman
 spec:
   ca:
-    secretName: root-secret
+    secretName: ca-root-secret
