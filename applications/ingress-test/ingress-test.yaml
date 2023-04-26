@@ -65,11 +65,12 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: ca-issuer
+    cert-manager.io/common-name: localhost
 spec:
   tls:
     - hosts:
         - localhost
-      secretName: somesecret
+      secretName: ingress-test-tls
   rules:
     - host: localhost
       http:

@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: localk8sdev-tls-ingress-test
+  name: ingress-test-tls
   namespace: ingress-test
 spec:
-  secretName: localk8sdev-tls-ingress-test
+  secretName: ingress-test-tls
   duration: 25000h # 3y
   renewBefore: 360h # 15d
   issuerRef:
@@ -12,5 +12,7 @@ spec:
     kind: ClusterIssuer
   commonName: localhost
   dnsNames:
+    - localhost
+    - localhost.local
     - rd.local
     - rdapi.local
