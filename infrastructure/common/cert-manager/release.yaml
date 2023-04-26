@@ -10,7 +10,7 @@ spec:
       chart: cert-manager
       sourceRef:
         kind: HelmRepository
-        name: helmrepository-jetstack
+        name: jetstack
         namespace: infrastructure-common
       version: "1.x"
   targetNamespace: certman
