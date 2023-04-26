@@ -71,7 +71,8 @@ spec:
         - localhost
       secretName: localk8sdev-tls-ingress-test
   rules:
-    - http:
+    - host: localhost
+      http:
         paths:
           - pathType: Prefix
             path: /foo(/|$)(.*)
