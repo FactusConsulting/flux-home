@@ -13,7 +13,7 @@ metadata:
 spec:
   isCA: true
   commonName: k8sdev-selfsigned-ca
-  secretName: ca-root-secret
+  secretName: ca-secret
   privateKey:
     algorithm: ECDSA
     size: 256
