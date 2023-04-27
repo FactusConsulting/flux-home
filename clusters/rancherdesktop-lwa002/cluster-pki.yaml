@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: infrastructure-common
+  name: cluster-pki
   namespace: flux-system
 spec:
   interval: 10m0s
@@ -9,5 +9,8 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./infrastructure/common
+  path: ./infrastructure/cluster-pki
   prune: true
+  dependsOn:
+    - name: infrastructure-common
+      namespace: flux-system
