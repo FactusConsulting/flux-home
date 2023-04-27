@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - helmrepository-ingress-nginx.yaml
-  - configmap-tcp-services.yaml
   - release.yaml
+  - configmap-tcp-services.yaml
   # - patch-ingress-service.yaml
