@@ -18,9 +18,9 @@ spec:
   install:
     remediation:
       retries: 3
-  # values:
-  #   controller:
-  #     hostPort:
-  #       enabled: true
-  #     service:
-  #       type: NodePort
+  values: #Decides whether its a loadbalanced service or just a nodeport mapping
+    controller:
+      hostPort:
+        enabled: true
+      service:
+        type: NodePort
