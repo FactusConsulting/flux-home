@@ -19,11 +19,8 @@ spec:
     remediation:
       retries: 100
   values:
+    tcp:
+      5432: "hotlaps-dev/hotlaps-dev-rw:5432"
     controller:
       extraArgs:
         tcp-services-configmap: "ingress-nginx/tcp-services"
-      service:
-        ports:
-          - name: postgres
-            port: 5432
-            targetport: 5432
