@@ -18,15 +18,15 @@ spec:
   install:
     remediation:
       retries: 100
-  values: #Decides whether its a loadbalanced service or just a nodeport mapping
-    controller:
-      hostPort:
-        enabled: true
-      extraArgs:
-        http-port: "30080"
-        https-port: "30443"
-      service:
-        type: NodePort
-        nodePorts:
-          http: 30080
-          https: 30443
+  # values: #Decides whether its a loadbalanced service or just a nodeport mapping
+  #   controller:
+  #     hostPort:
+  #       enabled: true
+  #     extraArgs:
+  #       http-port: "30080"
+  #       https-port: "30443"
+  #     service:
+  #       type: NodePort
+  #       nodePorts:
+  #         http: 30080
+  #         https: 30443
