@@ -20,10 +20,12 @@ spec:
       retries: 100
   values:
     controller:
-      extraPorts:
-        - name: tcp-5432
-          port: 5432
-          protocol: TCP
-          targetPort: 5432
+      extraArgs:
+        tcp-services-configmap: "ingress-nginx/tcp-services"
+      # extraPorts:
+      #   - name: tcp-5432
+      #     port: 5432
+      #     protocol: TCP
+      #     targetPort: 5432
       tcp:
         5432: "default/my-service:5432"
