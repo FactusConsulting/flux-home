@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nfs-provisioner
-  namespace: infrastructure-onprem
+  namespace: infrastructure
 spec:
   releaseName: nfs-subdir-external-provisioner
   chart:
@@ -11,9 +11,9 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: nfs-subdir-external-provisioner
-        namespace: infrastructure-onprem
+        namespace: infrastructure
       version: "4.x"
-  targetNamespace: infrastructure-onprem
+  targetNamespace: infrastructure-nfs-provisioner
   interval: 1h0m0s
   install:
     remediation:
