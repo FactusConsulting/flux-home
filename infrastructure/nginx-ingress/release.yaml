@@ -14,7 +14,7 @@ spec:
         namespace: infrastructure
       version: ">=4.0.0 <5.0.0"
   targetNamespace: ingress-nginx
-  interval: 1h0m0s
+  interval: 5m0s
   install:
     remediation:
       retries: 100
