@@ -22,10 +22,8 @@ spec:
     controller:
       extraArgs:
         tcp-services-configmap: "ingress-nginx/tcp-services"
-      # extraPorts:
-      #   - name: tcp-5432
-      #     port: 5432
-      #     protocol: TCP
-      #     targetPort: 5432
-      # tcp:
-      #   5432: "default/my-service:5432"
+      service:
+        ports:
+          - name: postgres
+            port: 5432
+            targetport: 5432
