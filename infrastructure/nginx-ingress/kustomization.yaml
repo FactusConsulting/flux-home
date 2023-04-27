@@ -5,4 +5,3 @@ resources:
   - helmrepository-ingress-nginx.yaml
   - release.yaml
   - configmap-wanted-tcp-services.yaml
-  # - patch-ingress-service.yaml

@@ -25,3 +25,7 @@ spec:
         enabled: true
       service:
         type: NodePort
+  valuesFrom:
+    - kind: ConfigMap
+      name: wanted-tcp-services
+      valuesKey: tcpServices.yaml
