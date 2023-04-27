@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wanted-tcp-services
+  namespace: infrastructure
+data:
+  tcpServices.yaml: |
+    tcp:
+      5432: "hotlaps-test/hotlaps-test-rw:5432"
+      5433: "hotlaps-test/hotlaps-test-any:5432"

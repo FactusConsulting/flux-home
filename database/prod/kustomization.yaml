@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - postgres.yaml
+  - configmap-wanted-tcp-services.yaml
