@@ -7,4 +7,4 @@ data:
   tcpServices.yaml: |
     tcp:
       5432: "hotlaps-prod/hotlaps-prod-rw:5432"
-      5433: "hotlaps-prod/hotlaps-prod-any:5432"
+      5433: "hotlaps-test/hotlaps-test-rw:5432"
