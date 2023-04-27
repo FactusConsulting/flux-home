@@ -19,7 +19,7 @@ spec:
     remediation:
       retries: 100
   values:
-    tcp:
+    tcp: |
       5432: "hotlaps-dev/hotlaps-dev-rw:5432"
       5433: "hotlaps-dev/hotlaps-dev-rw:5432"
     # controller:
