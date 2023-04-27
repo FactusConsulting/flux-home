@@ -17,7 +17,7 @@ spec:
   interval: 1h0m0s
   install:
     remediation:
-      retries: 3
+      retries: 4
   values: #Decides whether its a loadbalanced service or just a nodeport mapping
     controller:
       hostPort:
