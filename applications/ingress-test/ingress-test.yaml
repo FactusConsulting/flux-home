@@ -91,3 +91,20 @@ spec:
                 name: bar-service
                 port:
                   number: 8080
+    - host: rd.local
+      http:
+        paths:
+          - pathType: Prefix
+            path: /foo(/|$)(.*)
+            backend:
+              service:
+                name: foo-service
+                port:
+                  number: 8080
+          - pathType: Prefix
+            path: /bar(/|$)(.*)
+            backend:
+              service:
+                name: bar-service
+                port:
+                  number: 8080
