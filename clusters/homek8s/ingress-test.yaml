@@ -12,7 +12,7 @@ spec:
   path: ./applications/ingress-test
   prune: true
   dependsOn:
-    - name: nginx-ingress-kind
+    - name: nginx-ingress
       namespace: flux-system
     - name: localhost-certificate
       namespace: flux-system
