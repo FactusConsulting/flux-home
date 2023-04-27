@@ -9,7 +9,7 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./infrastructure/environment/test
+  path: ./infrastructure/environments/test
   prune: true
   dependsOn:
     - name: namespaces
