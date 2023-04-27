@@ -22,6 +22,9 @@ spec:
     controller:
       hostPort:
         enabled: true
+      extraArgs:
+        http-port: "30080"
+        https-port: "30443"
       service:
         type: NodePort
         nodePorts:
