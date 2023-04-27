@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: wanted-tcp-services
-  namespace: ingress-nginx
+  namespace: infrastructure
 data:
   tcpServices.yaml: |
     tcp:
