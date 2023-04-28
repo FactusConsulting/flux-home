@@ -70,6 +70,7 @@ spec:
   tls:
     - hosts:
         - ingresstest
+        - ingresstest.local
         - rd.local
         - rdapi.local
       secretName: ingress-test-tls
