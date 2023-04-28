@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmChart
 metadata:
   name: metallb
-  namespace: infrastructure-metallb
+  namespace: infrastructure
 spec:
   interval: 5m0s
   chart: metallb
@@ -10,4 +10,4 @@ spec:
   sourceRef:
     kind: HelmRepository
     name: metallb-crd
-  version: '5.*'
+  version: "5.*"
