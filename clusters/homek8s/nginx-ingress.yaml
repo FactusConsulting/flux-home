@@ -12,8 +12,6 @@ spec:
   path: ./infrastructure/nginx-ingress
   prune: true
   dependsOn:
-    - name: infrastructure-environments-test
-      namespace: flux-system
     - name: infrastructure-environments-prod
       namespace: flux-system
   healthChecks:
