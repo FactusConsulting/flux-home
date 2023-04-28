@@ -16,3 +16,5 @@ spec:
       namespace: flux-system
     - name: infrastructure-common
       namespace: flux-system
+    - name: nfs-provisioner
+      namespace: flux-system
