@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/rancherdesktop-lwa002
+  path: ./clusters/rancherdesktop
   prune: true
   sourceRef:
     kind: GitRepository
