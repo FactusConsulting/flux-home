@@ -10,4 +10,4 @@ spec:
   sourceRef:
     kind: HelmRepository
     name: metallb
-  version: "5.*"
+  version: "*"
