@@ -60,7 +60,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   namespace: ingress-test
-  name: example-ingress
+  name: test-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     kubernetes.io/ingress.class: "nginx"
@@ -91,7 +91,7 @@ spec:
                 name: bar-service
                 port:
                   number: 8080
-    - host: ingress-test
+    - host: ingresstest
       http:
         paths:
           - pathType: Prefix
