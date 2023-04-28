@@ -10,7 +10,7 @@ spec:
       chart: nfs-subdir-external-provisioner
       sourceRef:
         kind: HelmRepository
-        name: nfs-provisioner
+        name: infrastructure-nfs-provisioner
         namespace: infrastructure
       version: "4.x"
   targetNamespace: nfs-provisioner
