@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: nfs-provisioner
         namespace: infrastructure
-      version: "4.x"
+      version: "*"
   targetNamespace: nfs-provisioner
   interval: 1h0m0s
   install:

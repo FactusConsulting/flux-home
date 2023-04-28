@@ -1,7 +1,10 @@
 {
     "yaml.schemas": {
         "https://json.schemastore.org/kustomization.json": "file:///d%3A/source/flux-home/infrastructure/nginx/kustomization.yaml",
-        "kubernetes://schema/helm.toolkit.fluxcd.io/v2beta1@helmrelease": "file:///d%3A/source/flux-home/infrastructure/nginx/release.yaml",
+        "kubernetes://schema/helm.toolkit.fluxcd.io/v2beta1@helmrelease": [
+            "file:///d%3A/source/flux-home/infrastructure/nginx/release.yaml",
+            "file:///d%3A/source/flux-home/infrastructure/common/reflector/release.yaml"
+        ],
         "kubernetes://schema/kustomize.toolkit.fluxcd.io/v1beta2@kustomization": "file:///d%3A/source/flux-home/clusters/rancherdesktop-lwa002/nginx-ingress.yaml"
     }
 }
