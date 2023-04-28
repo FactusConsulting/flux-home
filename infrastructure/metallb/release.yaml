@@ -7,7 +7,7 @@ spec:
   releaseName: metallb
   chart:
     spec:
-      chart: infrastructure-metallb
+      chart: metallb
       sourceRef:
         kind: HelmRepository
         name: metallb
