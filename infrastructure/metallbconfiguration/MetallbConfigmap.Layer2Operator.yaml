@@ -7,7 +7,7 @@ spec:
   #  protocol: layer2
   addresses:
     - 192.168.1.41-192.168.1.59
-  autoAssign: false
+  autoAssign: true
 
 ---
 apiVersion: metallb.io/v1beta1
