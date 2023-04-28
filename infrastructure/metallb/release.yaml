@@ -9,7 +9,7 @@ spec:
     spec:
       chart: metallb
       sourceRef:
-        kind: HelmRepository
+        kind: HelmChart
         name: metallb
         namespace: infrastructure
       version: "*"
