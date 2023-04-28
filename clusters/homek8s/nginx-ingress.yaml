@@ -14,6 +14,8 @@ spec:
   dependsOn:
     - name: infrastructure-environments-prod
       namespace: flux-system
+    - name: metallb=configuration
+      namespace: flux-system
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
       kind: HelmRelease
