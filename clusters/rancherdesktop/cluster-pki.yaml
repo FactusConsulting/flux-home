@@ -9,7 +9,7 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: ./infrastructure/cluster-pki
+  path: ./infrastructure/cluster-pki/rancherdesktop
   prune: true
   dependsOn:
     - name: infrastructure-common
