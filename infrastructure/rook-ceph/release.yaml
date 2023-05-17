@@ -18,3 +18,7 @@ spec:
   install:
     remediation:
       retries: 100
+  values:
+    spec:
+      dashboard:
+        enabled: true
