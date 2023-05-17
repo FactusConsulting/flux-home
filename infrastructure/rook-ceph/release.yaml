@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: rook
         namespace: infrastructure
-      version: ">=4.0.0 <5.0.0"
+      version: "*"
   targetNamespace: rook
   interval: 5m0s
   install:
