@@ -19,7 +19,7 @@ spec:
     remediation:
       retries: 3
   values:
-    replicaCount: 2
+    replicaCount: 1
     resources:
       limits:
         memory: 256Mi
