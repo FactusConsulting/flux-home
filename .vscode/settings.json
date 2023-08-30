@@ -5,6 +5,7 @@
             "file:///d%3A/source/flux-home/infrastructure/nginx/release.yaml",
             "file:///d%3A/source/flux-home/infrastructure/common/reflector/release.yaml"
         ],
-        "kubernetes://schema/kustomize.toolkit.fluxcd.io/v1beta2@kustomization": "file:///d%3A/source/flux-home/clusters/rancherdesktop-lwa002/nginx-ingress.yaml"
+        "kubernetes://schema/kustomize.toolkit.fluxcd.io/v1beta2@kustomization": "file:///d%3A/source/flux-home/clusters/rancherdesktop-lwa002/nginx-ingress.yaml",
+        "kubernetes://schema/source.toolkit.fluxcd.io/v1beta2@helmrepository": "file:///d%3A/source/flux-home/applications/podinfo/helmrepository-podinfo.yaml"
     }
 }
