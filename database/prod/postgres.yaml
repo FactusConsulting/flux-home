@@ -5,7 +5,7 @@ metadata:
   name: hotlaps-prod
   namespace: hotlaps-prod
 spec:
-  instances: 3
+  instances: 2
   # Example of rolling update strategy:
   # - unsupervised: automated update of the primary once all
   #                 replicas have been upgraded (default)
