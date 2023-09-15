@@ -5,7 +5,7 @@ metadata:
   name: hotlaps-test
   namespace: hotlaps-test
 spec:
-  instances: 2
+  instances: 1
   # Example of rolling update strategy:
   # - unsupervised: automated update of the primary once all
   #                 replicas have been upgraded (default)
@@ -21,8 +21,8 @@ spec:
     size: 1Gi
   resources:
     requests:
-      memory: "512Mi"
+      memory: "128Mi"
       cpu: "0.2"
     limits:
-      memory: "512Mi"
+      memory: "128Mi"
       cpu: "0.5"
