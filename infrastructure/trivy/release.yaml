@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: trivy-operator
+  namespace: trivy
+spec:
+  releaseName: trivy
+  chart:
+    spec:
+      chart: trivy-operator
+      sourceRef:
+        kind: HelmRepository
+        name: trivy
+        namespace: infrastructure
+      version: "*"
+  targetNamespace: trivy
+  interval: 1h0m0s
+  install:
+    remediation:
+      retries: 3
