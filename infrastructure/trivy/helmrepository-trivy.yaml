@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: trivy
+  name: aqua
   namespace: infrastructure
 spec:
   interval: 30m
