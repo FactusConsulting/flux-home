@@ -19,6 +19,12 @@ spec:
     remediation:
       retries: 3
   values:
+    readinessProbe:
+      exec:
+        command:
+        - podcli
+        - check
+        - http://localhost:9898/readyz
     replicaCount: 1
     resources:
       limits:
