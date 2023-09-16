@@ -7,7 +7,7 @@ spec:
   releaseName: trivy-operator
   chart:
     spec:
-      chart: "aqua/trivy-operator"
+      chart: "trivy-operator"
       sourceRef:
         kind: HelmRepository
         name: aqua
