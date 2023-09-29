@@ -4,13 +4,13 @@ metadata:
   name: trivy-operator
   namespace: trivy
 spec:
-  releaseName: trivy
+  releaseName: trivy-operator
   chart:
     spec:
-      chart: "aqua/trivy-operator"
+      chart: "trivy-operator"
       sourceRef:
         kind: HelmRepository
-        name: trivy
+        name: aqua
         namespace: infrastructure
       version: "*"
   interval: 1h0m0s
