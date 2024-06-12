@@ -33,7 +33,7 @@ spec:
     name: system-upgrade-controller
     namespace: flux-system
   validation: client
-  targetNamespace: system-upgrade
+  # targetNamespace: system-upgrade
   # dependsOn:
   #   - name: system-upgrade-namespace
 
@@ -53,7 +53,7 @@ spec:
     name: system-upgrade-controller
     namespace: flux-system
   # The targetNamespace can be adjusted if you want to deploy to a different namespace
-  targetNamespace: system-upgrade
+  # targetNamespace: system-upgrade
   validation: client
 
 
