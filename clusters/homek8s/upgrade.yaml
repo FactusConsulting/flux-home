@@ -25,7 +25,7 @@ spec:
     name: system-upgrade-controller
     namespace: flux-system
   # The targetNamespace can be adjusted if you want to deploy to a different namespace
-  targetNamespace: default
+  targetNamespace: system-upgrade
   validation: client
 
 ---
