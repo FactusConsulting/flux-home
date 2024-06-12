@@ -6,3 +6,4 @@ resources:
   - namespace-infrastructure-common.yaml
   - namespace-infrastructure.yaml
   - namespace-ingress-nginx.yaml
+  - namespace-system-upgrade.yaml
