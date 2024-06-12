@@ -2,7 +2,7 @@
 apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
-  name: server-plan
+  name: server-plan-flux
   namespace: system-upgrade
   labels:
     rke2-upgrade: server
@@ -31,7 +31,7 @@ spec:
 apiVersion: upgrade.cattle.io/v1
 kind: Plan
 metadata:
-  name: agent-plan
+  name: agent-plan-flux
   namespace: system-upgrade
   labels:
     rke2-upgrade: agent
