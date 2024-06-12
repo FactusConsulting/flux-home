@@ -1,3 +1,35 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: system-upgrade-controller
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: https://github.com/rancher/system-upgrade-controller
+  ref:
+    tag: v0.13.2
+
+---
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: system-upgrade-controller
+  namespace: flux-system
+spec:
+  interval: 1h
+  path: "./"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: system-upgrade-controller
+    namespace: flux-system
+  # The targetNamespace can be adjusted if you want to deploy to a different namespace
+  targetNamespace: default
+  validation: client
+
+---
+
 # Server plan
 apiVersion: upgrade.cattle.io/v1
 kind: Plan
