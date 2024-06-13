@@ -33,7 +33,6 @@ spec:
     name: system-upgrade-controller
     namespace: flux-system
   targetNamespace: system-upgrade
-  validation: client
 
 
 ---
