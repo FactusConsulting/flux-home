@@ -83,7 +83,8 @@ spec:
       # - {key: rke2-upgrade, operator: Exists}
       # - {key: rke2-upgrade, operator: NotIn, values: ["disabled", "false"]}
       # When using k8s version 1.19 or older, swap control-plane with master
-      - {key: node-role.kubernetes.io/control-plane, operator: NotIn, values: ["true"]}
+      - {key: node-role.kubernetes.io/control-plane, operator: In, values: ["false"]}
+      # - {key: node-role.kubernetes.io/worker, operator: In, values: ["true"]}
   prepare:
     args:
     - prepare
