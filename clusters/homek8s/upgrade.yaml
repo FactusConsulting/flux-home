@@ -1,21 +1,21 @@
-# ---
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: system-upgrade
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: system-upgrade
 
-# ---
+---
 
-# apiVersion: source.toolkit.fluxcd.io/v1beta2
-# kind: GitRepository
-# metadata:
-#   name: system-upgrade-controller
-#   namespace: flux-system
-# spec:
-#   interval: 1h
-#   url: https://github.com/rancher/system-upgrade-controller
-#   ref:
-#     tag: v0.13.2
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: system-upgrade-controller
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: https://github.com/rancher/system-upgrade-controller
+  ref:
+    tag: v0.13.2
 
 # ---
 
