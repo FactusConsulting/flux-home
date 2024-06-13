@@ -26,7 +26,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: "./"
+  path: "https://github.com/rancher/system-upgrade-controller/releases/download/v0.13.2/system-upgrade-controller.yaml"
   prune: true
   sourceRef:
     kind: GitRepository
